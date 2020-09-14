@@ -1,0 +1,20 @@
+
+def countingValleys(steps, path):
+    # Write your code here
+
+    #altitude starting at sea level
+    alt=0
+
+    #number of valleys
+    val=0
+
+    for i in range(0,steps):
+
+        if path[i]=='D':
+            alt=alt-1
+            if alt==-1:
+                val=val+1
+        else:
+            alt=alt+1
+    
+    return(val)

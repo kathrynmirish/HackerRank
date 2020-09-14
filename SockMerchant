@@ -1,0 +1,27 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the sockMerchant function below.
+def sockMerchant(n, ar):
+    
+    #counter for numbers of pairs of socks
+    p=0
+
+    #list of unpaired socks 
+    unpaired = []
+
+    for i in range (0,len(ar)):
+        try:
+             j=unpaired.index(ar[i])
+             unpaired.pop(j)
+             p=p+1
+        except:
+            unpaired.append(ar[i])
+
+
+    return(p)    
